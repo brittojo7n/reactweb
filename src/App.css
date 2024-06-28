@@ -1,4 +1,4 @@
-/* Ensure the entire app has a dark background and light text color */
+/* App-wide custom styles */
 body, .App {
   background-color: #151516 !important; /* Dark background color */
   color: #d6cdcd !important; /* Light text color for contrast */
@@ -37,14 +37,15 @@ body, .App {
   background-color: #ffc107 !important;
 }
 
-.navbar-brand, .nav-link, .dropdown-item {
-  color: #000 !important; /* Ensures dark text on the yellow navbar */
+.navbar-brand, .nav-link {
+  color: #343a40 !important; /* Dark text color for navbar links */
 }
 
 .nav-link.active {
-  color: #fff !important; /* Active link color */
+  color: #343a40 !important; /* Active link color */
 }
 
+/* Dropdown menu styling */
 .dropdown-menu {
   background-color: #1f1f1f !important;
 }
@@ -81,7 +82,6 @@ body, .App {
   color: #1f1f1f !important;
 }
 
-/* Override Bootstrap button colors */
 .btn-primary {
   background-color: #007bff !important;
   border-color: #007bff !important;
