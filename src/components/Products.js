@@ -4,10 +4,10 @@ import Card from './Card';
 
 const products = [
   {
-    imgSrc: "https://rukminim2.flixcart.com/image/850/1000/kgzg8sw0/internal-hard-drive/p/g/z/wd-1-tb-hard-disk-original-imafx3kdtz2fckp8.jpeg?q=90&crop=false",
-    title: "1TB Hard Drive",
+    imgSrc: "https://5.imimg.com/data5/SELLER/Default/2022/11/LZ/LC/QK/154920573/stkz5000400-seagate-one-touch-hard-disk-500x500.png",
+    title: "10TB Hard Drive",
     text: "Reliable storage solution with 7200 RPM for fast read/write speeds.",
-    price: "50"
+    price: "78"
   },
   {
     imgSrc: "https://www.crucial.in/content/dam/crucial/ssd-products/t700/images/web/crucial-T700-ssd-dual-dynamic-hero-image.psd.transform/small-png/img.png",
@@ -20,8 +20,14 @@ const products = [
     title: "16GB DDR4 RAM",
     text: "High-performance memory module for enhanced multitasking.",
     price: "80"
+  },
+  {
+    imgSrc: " https://drr622wuctn26.cloudfront.net/image/cache/catalog/graphics%20card/asus/rog-strix-rtx4080-16g-gaming/rog-strix-rtx4080-16g-gaming-image-main-600x600.png",
+    title: "ROG STRIX RTX 4080 16GB VRAM",
+    text: "High performance GPU GeForce RTX 4080 16GB VRAM.",
+    price: "1209"
   }
-];
+ ];
 
 const Products = () => {
   return (
