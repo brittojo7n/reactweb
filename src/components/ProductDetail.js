@@ -37,9 +37,7 @@ const ProductDetail = () => {
         style={{ 
           width: '300px', 
           height: '300px', 
-          objectFit: 'cover', 
-          display: 'block', 
-          margin: '0 auto 20px' 
+          display: 'block'
         }} 
       />
       <p>{product.product_desc}</p>
