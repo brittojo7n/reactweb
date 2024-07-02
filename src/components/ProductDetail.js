@@ -1,12 +1,28 @@
 // src/components/ProductDetail.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Products from './Products'; // Import the Products component to access the products array
 
 const ProductDetail = () => {
   const { productId } = useParams();
-  const products = Products.getProducts(); // Access the products array using a static method
-  const product = products.find(p => p.id === parseInt(productId));
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const response = await fetch('http://localhost/hstore/hstore.php');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const products = await response.json();
+        const product = products.find(p => p.product_id === productId);
+        setProduct(product);
+      } catch (error) {
+        console.error('Error fetching product details:', error);
+      }
+    };
+
+    fetchProduct();
+  }, [productId]);
 
   if (!product) {
     return <h2>Product not found</h2>;
@@ -14,10 +30,10 @@ const ProductDetail = () => {
 
   return (
     <div className="container">
-      <h1>{product.title}</h1>
+      <h1>{product.product_name}</h1>
       <img 
-        src={product.imgSrc} 
-        alt={product.title} 
+        src={product.product_img} 
+        alt={product.product_name} 
         style={{ 
           width: '300px', 
           height: '300px', 
@@ -26,8 +42,8 @@ const ProductDetail = () => {
           margin: '0 auto 20px' 
         }} 
       />
-      <p>{product.text}</p>
-      <h3>${product.price}</h3>
+      <p>{product.product_desc}</p>
+      <h3>${product.product_price}</h3>
     </div>
   );
 }
