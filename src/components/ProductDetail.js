@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 const ProductDetail = () => {
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -24,6 +25,24 @@ const ProductDetail = () => {
     fetchProduct();
   }, [productId]);
 
+  const addToCart = async () => {
+    try {
+      const response = await fetch('http://localhost/hstore/add_to_cart.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ product_id: productId }),
+      });
+
+      const data = await response.json();
+      setMessage(data.message);
+    } catch (error) {
+      console.error('Error adding to cart:', error);
+      setMessage('Error adding to cart.');
+    }
+  };
+
   if (!product) {
     return <h2>Product not found</h2>;
   }
@@ -42,6 +61,8 @@ const ProductDetail = () => {
       />
       <p>{product.product_desc}</p>
       <h3>${product.product_price}</h3>
+      <button className="btn btn-primary" onClick={addToCart}>Add to Cart</button>
+      {message && <p>{message}</p>}
     </div>
   );
 }
