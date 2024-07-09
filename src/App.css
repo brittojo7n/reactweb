@@ -96,3 +96,9 @@ body, .App {
 h1 {
   color: #d6cdcd !important;
 }
+
+/* App-wide custom styles */
+.display-4 {
+  color: #007bff; /* Blue color example */
+  font-family: 'Roboto', sans-serif; /* Example font */
+}

@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
+// src/components/Navbar.js
+import React, { useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navbar.css'; // Optional: add custom styles here
@@ -7,25 +8,21 @@ const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
 
-  const handleScroll = useCallback(() => {
-    const currentScrollPos = window.pageYOffset;
-    const isVisible = prevScrollPos > currentScrollPos || currentScrollPos < 10;
-
-    setPrevScrollPos(currentScrollPos);
-    setVisible(isVisible);
-  }, [prevScrollPos]);
-
   useEffect(() => {
-    const scrollHandler = () => {
-      handleScroll();
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      const isVisible = prevScrollPos > currentScrollPos || currentScrollPos < 10;
+  
+      setPrevScrollPos(currentScrollPos);
+      setVisible(isVisible);
     };
-
-    window.addEventListener('scroll', scrollHandler);
-
+  
+    window.addEventListener('scroll', handleScroll);
+  
     return () => {
-      window.removeEventListener('scroll', scrollHandler);
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, [handleScroll]); // Only include handleScroll in the dependency array
+  }, [prevScrollPos]); // Include prevScrollPos in the dependency array
 
   return (
     <nav className={`navbar navbar-expand-lg fixed-top ${visible ? 'nav-down' : 'nav-up'}`}>
@@ -44,6 +41,9 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" activeClassName="active" to="/contact">Contact</NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" activeClassName="active" to="/cart">Cart</NavLink>
             </li>
           </ul>
           <form className="d-flex">
