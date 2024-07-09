@@ -72,10 +72,10 @@ const Cart = () => {
   };
 
   return (
-    <div className="container">
-      <h1>Cart</h1>
+    <div className="container mt-5">
+      <h1 className="text-center mb-4">Cart</h1>
       {cartItems.length === 0 ? (
-        <p>No items in cart.</p>
+        <p className="text-center">No items in cart.</p>
       ) : (
         <div>
           <div className="row">
@@ -109,7 +109,7 @@ const Cart = () => {
               </div>
             ))}
           </div>
-          <div className="mt-3">
+          <div className="text-end mt-3">
             <h3>Total Cost: ${totalCost.toFixed(2)}</h3>
           </div>
         </div>
