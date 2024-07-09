@@ -22,17 +22,17 @@ const Home = () => {
         <h2 className="text-center mb-4">Our Features</h2>
         <div className="row">
           <div className="col-md-4 text-center">
-            <img src="https://via.placeholder.com/150" className="rounded-circle mb-3" alt="High Quality" />
+            <img src="https://cdn-icons-png.flaticon.com/512/1892/1892655.png" className="img-fluid mb-3" alt="High Quality" style={{ width: '80px' }} />
             <h3>High Quality</h3>
             <p>We offer high-quality products from the best brands to ensure your satisfaction.</p>
           </div>
           <div className="col-md-4 text-center">
-            <img src="https://via.placeholder.com/150" className="rounded-circle mb-3" alt="Affordable Prices" />
+            <img src="https://cdn-icons-png.flaticon.com/512/6948/6948360.png" className="img-fluid mb-3" alt="Affordable Prices" style={{ width: '80px' }} />
             <h3>Affordable Prices</h3>
             <p>Get the best deals on all your hardware needs with our competitive pricing.</p>
           </div>
           <div className="col-md-4 text-center">
-            <img src="https://via.placeholder.com/150" className="rounded-circle mb-3" alt="Fast Delivery" />
+            <img src="https://cdn-icons-png.flaticon.com/512/9561/9561692.png" className="img-fluid mb-3" alt="Fast Delivery" style={{ width: '80px' }} />
             <h3>Fast Delivery</h3>
             <p>Enjoy fast and reliable delivery right to your doorstep with every order.</p>
           </div>
