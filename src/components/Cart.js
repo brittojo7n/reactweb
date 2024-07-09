@@ -56,7 +56,7 @@ const Cart = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ product_id: productId, quantity: newQuantity }),
+        body: JSON.stringify({ product_id: productId, quantity: parseInt(newQuantity, 10) }),
       });
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -90,7 +90,7 @@ const Cart = () => {
                     <div className="d-flex justify-content-between align-items-center">
                       <button 
                         className="btn btn-outline-secondary" 
-                        onClick={() => updateQuantity(item.product_id, item.quantity - 1)} 
+                        onClick={() => updateQuantity(item.product_id, parseInt(item.quantity, 10) - 1)} 
                         disabled={item.quantity <= 1}
                       >
                         -
@@ -98,7 +98,7 @@ const Cart = () => {
                       <span>{item.quantity}</span>
                       <button 
                         className="btn btn-outline-secondary" 
-                        onClick={() => updateQuantity(item.product_id, item.quantity + 1)}
+                        onClick={() => updateQuantity(item.product_id, parseInt(item.quantity, 10) + 1)}
                       >
                         +
                       </button>
