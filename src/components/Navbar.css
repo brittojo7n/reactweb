@@ -1,0 +1,55 @@
+/* src/components/Navbar.css */
+
+.navbar {
+    transition: top 0.3s ease-in-out;
+    background-color: #ffc107; /* Navbar background color */
+    color: #343a40; /* Navbar text color */
+  }
+  
+  .navbar-brand, .nav-link {
+    color: #343a40 !important; /* Navbar link text color */
+  }
+  
+  .nav-link.active {
+    color: #343a40 !important; /* Active link text color */
+  }
+  
+  .navbar-toggler-icon {
+    color: #343a40; /* Navbar toggle icon color */
+  }
+  
+  .navbar-toggler {
+    border-color: #343a40; /* Navbar toggle button border color */
+  }
+  
+  .navbar-nav .nav-item {
+    margin-right: 10px; /* Navbar item margin */
+  }
+  
+  .navbar-nav .nav-item:last-child {
+    margin-right: 0; /* Remove margin for last navbar item */
+  }
+  
+  .form-control {
+    background-color: #fff; /* Search input background color */
+    color: #343a40; /* Search input text color */
+  }
+  
+  .btn-outline-success {
+    color: #fff; /* Search button text color */
+    border-color: #fff; /* Search button border color */
+  }
+  
+  .btn-outline-success:hover {
+    background-color: #343a40; /* Search button hover background color */
+    color: #fff; /* Search button hover text color */
+  }
+  
+  .nav-down {
+    top: 0; /* Navbar position when visible */
+  }
+  
+  .nav-up {
+    top: -80px; /* Navbar position when hidden */
+  }
+  

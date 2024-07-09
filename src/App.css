@@ -96,15 +96,3 @@ body, .App {
 h1 {
   color: #d6cdcd !important;
 }
-
-/* Navbar with slide-down effect */
-.navbar {
-  transition: top 0.3s;
-  position: sticky;
-  top: 0;
-  z-index: 1000; /* Ensure navbar appears above other content */
-}
-
-.navbar-hidden {
-  top: -100px; /* Adjust this value to control how much the navbar slides up */
-}
