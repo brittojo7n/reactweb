@@ -82,7 +82,7 @@ const Cart = () => {
             {cartItems.map(item => (
               <div key={item.product_id} className="col-md-4 mb-3">
                 <div className="card">
-                  <img src={item.product_img} className="card-img-top" alt={item.product_name} style={{ height: '200px', objectFit: 'cover' }} />
+                  <img src={item.product_img} className="card-img-top" alt={item.product_name} style={{ width: '100%', height: '200px', objectFit: 'contain' }} />
                   <div className="card-body">
                     <h5 className="card-title">{item.product_name}</h5>
                     <p className="card-text">{item.product_desc}</p>

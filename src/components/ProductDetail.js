@@ -48,7 +48,7 @@ const ProductDetail = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container mt-5" style={{ marginTop: '80px' }}>
       <h1>{product.product_name}</h1>
       <img 
         src={product.product_img} 
