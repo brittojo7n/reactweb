@@ -34,15 +34,15 @@ body, .App {
 
 /* Bootstrap navbar styling */
 .navbar {
-  background-color: #ffc107 !important;
+  background-color: #00b3ff7f !important;
 }
 
 .navbar-brand, .nav-link {
-  color: #343a40 !important; /* Dark text color for navbar links */
+  color: #d0d0d0 !important; /* Dark text color for navbar links */
 }
 
 .nav-link.active {
-  color: #343a40 !important; /* Active link color */
+  color: #d0d0d0 !important; /* Active link color */
 }
 
 /* Dropdown menu styling */

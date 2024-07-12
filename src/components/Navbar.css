@@ -2,24 +2,24 @@
 
 .navbar {
     transition: top 0.3s ease-in-out;
-    background-color: #ffc107; /* Navbar background color */
-    color: #343a40; /* Navbar text color */
+    background-color: #00b3ff7f; /* Navbar background color */
+    color: #d0d0d0; /* Navbar text color */
   }
   
   .navbar-brand, .nav-link {
-    color: #343a40 !important; /* Navbar link text color */
+    color: #d0d0d0 !important; /* Navbar link text color */
   }
   
   .nav-link.active {
-    color: #343a40 !important; /* Active link text color */
+    color: #d0d0d0 !important; /* Active link text color */
   }
   
   .navbar-toggler-icon {
-    color: #343a40; /* Navbar toggle icon color */
+    color: #d0d0d0; /* Navbar toggle icon color */
   }
   
   .navbar-toggler {
-    border-color: #343a40; /* Navbar toggle button border color */
+    border-color: #d0d0d0; /* Navbar toggle button border color */
   }
   
   .navbar-nav .nav-item {
@@ -31,18 +31,18 @@
   }
   
   .form-control {
-    background-color: #fff; /* Search input background color */
-    color: #343a40; /* Search input text color */
+    background-color: #1e1e1ecb; /* Search input background color */
+    color: #fff; /* Search input text color */
   }
   
   .btn-outline-success {
     color: #fff; /* Search button text color */
-    border-color: #fff; /* Search button border color */
+    border-color: #d0d0d0; /* Search button border color */
   }
   
   .btn-outline-success:hover {
-    background-color: #343a40; /* Search button hover background color */
-    color: #fff; /* Search button hover text color */
+    background-color: #d0d0d0; /* Search button hover background color */
+    color: #000; /* Search button hover text color */
   }
   
   .nav-down {
