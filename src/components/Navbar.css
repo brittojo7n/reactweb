@@ -30,19 +30,8 @@
     margin-right: 0; /* Remove margin for last navbar item */
   }
   
-  .form-control {
-    background-color: #1e1e1ecb; /* Search input background color */
-    color: #fff; /* Search input text color */
-  }
-  
-  .btn-outline-success {
-    color: #fff; /* Search button text color */
-    border-color: #d0d0d0; /* Search button border color */
-  }
-  
-  .btn-outline-success:hover {
-    background-color: #d0d0d0; /* Search button hover background color */
-    color: #000; /* Search button hover text color */
+  .navbar {
+    background-color: #00b3ff7f !important;
   }
   
   .nav-down {

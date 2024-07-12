@@ -32,32 +32,6 @@ body, .App {
   }
 }
 
-/* Bootstrap navbar styling */
-.navbar {
-  background-color: #00b3ff7f !important;
-}
-
-.navbar-brand, .nav-link {
-  color: #d0d0d0 !important; /* Dark text color for navbar links */
-}
-
-.nav-link.active {
-  color: #d0d0d0 !important; /* Active link color */
-}
-
-/* Dropdown menu styling */
-.dropdown-menu {
-  background-color: #1f1f1f !important;
-}
-
-.dropdown-item {
-  color: #d6cdcd !important;
-}
-
-.dropdown-item:hover {
-  background-color: #343a40 !important;
-}
-
 /* Card styling */
 .card {
   background-color: #1f1f1f !important;
@@ -66,9 +40,14 @@ body, .App {
 
 /* Form control styling */
 .form-control {
-  background-color: #1f1f1f !important;
-  color: #d6cdcd !important;
+  background-color: #1e1e1ecb !important; /* Search input background color */
+  color: #fff !important; /* Search input text color */
   border: 1px solid #d6cdcd !important;
+}
+
+/* Light color for placeholder text */
+.form-control::placeholder {
+  color: #d6cdcd !important;
 }
 
 /* Button styling */

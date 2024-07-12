@@ -12,13 +12,13 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
       const isVisible = prevScrollPos > currentScrollPos || currentScrollPos < 10;
-  
+
       setPrevScrollPos(currentScrollPos);
       setVisible(isVisible);
     };
-  
+
     window.addEventListener('scroll', handleScroll);
-  
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
