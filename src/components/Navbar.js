@@ -46,10 +46,6 @@ const Navbar = () => {
               <NavLink className="nav-link" activeClassName="active" to="/cart">Cart</NavLink>
             </li>
           </ul>
-          <form className="d-flex">
-            <input className="form-control me-2" type="search" placeholder="Search Products" aria-label="Search" />
-            <button className="btn btn-outline-success" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
